@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block</title>
+
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/indexPage.css">
+    <link rel="stylesheet" href="/css/_article_preview.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <main>
+            <h1 class="page-title" onclick="location.href = '/'">Block</h1>
+            <form action="/article/search" style="display: flex; width: 100%;">
+                <button class="btn-normal" style="background-color: var(--btn-green)" type="submit"
+                    formaction="/article/edit?null">Create Article</button>
+                <input name="search_query" id="search_query" class="search-box" type="text" placeholder="search...">
+                <button type="submit" class="btn-normal" style="background-color: var(--btn-gray)"
+                    type="submit">Search</button>
+            </form>
+            <section class="article-container">
+                <% if (articles.length !==0) { %>
+                <h1 class="article-title">Articles</h1>
+                <%- include('./_article_list', { articles }) %>
+                <% } else { %>
+                <h2 style="margin: auto; font-family: Arial;">no article found</h2>
+                <% } %>
+                <a href="/article/<%= parseInt(order)+1 %>" style="" class="btn-normal">See More</a>
+             </section>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<div class="article-prev" onclick="location.href = '/article/read/<%= article.id %>'">
+    <div class="container">
+        <h1 class="article-prev--title">
+            <%= article.title %>
+        </h1>
+        <span class="article-prev--date mut-text">
+            <%= article.createdAt %>
+        </span>
+        <p class="article-prev--desc">
+            <%= article.description %>
+        </p>
+        <form class="article-prev--form" action="/article/edit/<%= article.id %>">
+            <button type="submit" formaction="/article/delete/<%= article.id %>" formmethod="post"
+                style="background-color: var(--btn-red)" class="btn-normal">Delete</button>
+            <button style="background-color: var(--btn-blue)" class="btn-normal">Edit</button>
+            <span class="article-prev--visit-count mut-text">
+                <%= article.visitCount %>
+            </span>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+.article-prev {
+    background-color:whitesmoke;
+    display: flex;
+    width: 570px;
+    height: 180px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.article-prev:hover {
+    cursor: pointer;
+}
+
+.article-prev > .container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 90%;
+}
+
+.article-prev--title {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 3px 0 0 10px;
+}
+
+.article-prev--date, .article-prev--visit-count {   
+    margin: 2px 7px;
+}
+
+.article-prev--desc {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+}
+
+.article-prev--form {
+    margin: auto 0px;
+}

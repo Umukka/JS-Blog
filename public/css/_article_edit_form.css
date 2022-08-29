@@ -1,0 +1,22 @@
+.edit-form {
+    width: 90%;
+}
+
+.edit-form #title {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.edit-form #content, .edit-form #description {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.edit-form label {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(76, 76, 76)
+}
+
+.edit-form--btn-container {
+    margin: 20px 0;
+}

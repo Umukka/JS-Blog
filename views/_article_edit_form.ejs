@@ -1,0 +1,17 @@
+<form name="form" class="vertical edit-form" action="/article/save/<%= article.id %>" method="POST">
+    <label for="title">Title</label>
+    <input name="title" id="title" type="text" placeholder="Title..." value="<%=article.title %>">
+
+    <label for="content">Content</label>
+    <textarea name="content" id="content" cols="30" rows="20" placeholder="Content..."><%= article.content %></textarea>
+
+    <label for="description">Description</label>
+    <textarea name="description" id="description" cols="30" rows="6"
+        placeholder="description..."><%= article.description %></textarea>
+
+    <div class="edit-form--btn-container">
+        <button style="background-color: var(--btn-gray)" class="btn-normal" type="submit"
+            formaction="/article@1">Cancel</button>
+        <button style="background-color: var(--btn-green)" class="btn-normal" type="submit">Save</button>
+    </div>
+</form>

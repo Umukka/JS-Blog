@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/css/_navbar.css">
+<nav class="navbar">
+    <h1 class="page-title" style="margin: 0 0 0 20px;" onclick="location.href = '/'">Block</h1>
+    <form action="/article/search" class="nav-form">
+        <button class="btn-normal" style="background-color: var(--btn-green)" type="submit"
+            formaction="/article/edit?null">Create Article</button>
+        <input name="search_query" id="search_query" class="search-box" type="text" placeholder="search...">
+        <button type="submit" class="btn-normal" style="background-color: var(--btn-gray)"
+            type="submit">Search</button>
+    </form>
+    <div class="auth-items">
+        <% if (auth) { %>
+        <a class="btn-transparent login-link" href="/login">Login</a>
+        <a class="btn-transparent signup-link" href="/signup">Sign Up</a>
+        <% } else { %>
+        <a class="btn-transparent logout-link" href="/logout">Log out</a>
+        <% } %>
+</nav>

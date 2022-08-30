@@ -12,6 +12,7 @@
 </head>
 <body>
     <div class="main-container">
+    <%- include('./_navbar', { auth: false }) %>
     <main>
         <h1 class="page-title" onclick="location.href = '/'">Block</h1>
         <%- include('./_article_edit_form') %> 

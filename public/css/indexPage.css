@@ -15,12 +15,3 @@
     align-self: center;
     margin: 5px;
 }
-
-.search-box {
-    font-size: 15px;
-    width: max-content;
-    flex: 1;
-    height: 35px;
-    padding: 0 5px;
-    border-radius: 5px;
-}

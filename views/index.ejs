@@ -14,15 +14,8 @@
 
 <body>
     <div class="main-container">
+        <%- include('./_navbar', {auth: false}) %>
         <main>
-            <h1 class="page-title" onclick="location.href = '/'">Block</h1>
-            <form action="/article/search" style="display: flex; width: 100%;">
-                <button class="btn-normal" style="background-color: var(--btn-green)" type="submit"
-                    formaction="/article/edit?null">Create Article</button>
-                <input name="search_query" id="search_query" class="search-box" type="text" placeholder="search...">
-                <button type="submit" class="btn-normal" style="background-color: var(--btn-gray)"
-                    type="submit">Search</button>
-            </form>
             <section class="article-container">
                 <% if (articles.length !==0) { %>
                 <h1 class="article-title">Articles</h1>
@@ -30,7 +23,7 @@
                 <% } else { %>
                 <h2 style="margin: auto; font-family: Arial;">no article found</h2>
                 <% } %>
-                <a href="/article/<%= parseInt(order)+1 %>" style="" class="btn-normal">See More</a>
+                <a href="/article/<%= parseInt(order)+1 %>" class="btn-normal">Load More Article</a>
              </section>
         </main>
     </div>

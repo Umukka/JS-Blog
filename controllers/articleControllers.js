@@ -4,7 +4,6 @@ const Article = require(join(PATHS.models, 'articleModel'))
 async function articleRead(req, res) {
     try {
         let article = await Article.findById(req.params.id);
-        console.log(article)
         const { 
             title, description, content, visitCount,updated_at
         } = article;
